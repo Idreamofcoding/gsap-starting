@@ -1,0 +1,75 @@
+.logo {
+    width: 90px;
+    height: 90px;
+}
+
+.giraffe {
+    width: 100px;
+    height: 100px;
+}
+
+.skull-candy {
+    width: 100px;
+    height: 100px;
+}
+
+.circle-box {
+    display: flex;
+    margin-top: 40px;
+}
+
+.circle {
+    color: red;
+    background-color: aquamarine;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.yoyo-container {
+    margin-top: 80px;
+}
+
+.box {
+    border: 10px solid;
+    width: 80px;
+    height: 80px;
+}
+
+#box1 {
+    border-color: aquamarine;
+}
+
+#box2 {
+    border-color: lime;
+}
+
+#box3 {
+    border-color: orange;
+}
+
+.box-flex {
+    display: flex;
+}
+
+#box4 {
+    margin-left: 80px;
+}
+
+#box5 {
+    margin-left: 10px;
+}
+
+#box6 {
+    margin-left: 50px;
+}
+
+/* albert */
+.albert {
+    display: flex;
+    letter-spacing: 40px;
+    margin-top: 200px;
+    margin-left: 80px;
+    margin-bottom: 100px;
+    
+}

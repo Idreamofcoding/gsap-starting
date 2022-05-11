@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- <link rel="stylesheet" href="./styles/main.scss"> -->
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <div id="demo">
+        <img src="https://images.pexels.com/photos/760162/pexels-photo-760162.jpeg?auto=compress&cs=tinysrgb&w=800" class="logo" alt="">
+
+        <img src="https://images.pexels.com/photos/3246665/pexels-photo-3246665.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="giraffe" alt="">
+
+        <img src="https://images.pexels.com/photos/1918290/pexels-photo-1918290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="skull-candy" alt="">
+    </div>
+
+    <div class="circle-box">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <div class="yoyo-container">
+        <div id='box1' class='box'>
+            a
+        </div>
+        <div id='box2' class='box'>
+            b
+        </div>
+        <div id='box3' class='box'>
+            c
+        </div>
+        <div class="box-flex">
+            <div id='box4' class='box'>
+                c
+            </div>
+            <div id='box5' class='box'>
+                c
+            </div>
+            <div id='box6' class='box'>
+                c
+            </div>
+        </div>
+        <div class="albert">
+            <div class="a"><h1>A</h1></div>
+            <div class="a"><h1>L</h1></div>
+            <div class="a"><h1>B</h1></div>
+            <div class="a"><h1>E</h1></div>
+            <div class="a"><h1>R</h1></div>
+            <div class="a"><h1>T</h1></div>
+        </div>
+    </div>
+
+    <div class="triangles">
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CSSRulePlugin.min.js" integrity="sha512-oYnRsy+bFXYr+btXcKk2dpzfERnCUc5G4GkJ0AO/XSvomLV7Xc7tZVhTsYIz9QzOAw9qo/6qoA6JTpzaYuHUGg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        gsap.to(".logo", {duration: 10, x:500, backgroundColor: "#560563", borderRadius: '20%', border: "5px solid red", ease: "elastic"})
+
+        gsap.set(".giraffe, .skull-candy", {transformOrigin: '50% 50%'})
+
+        gsap.to('.giraffe, .skull-candy', {duration: 2, rotation: 360})
+
+        gsap.from('.circle', {duration: 1, opacity: 0, y: "random(-200, 200)", stagger: 0.25})
+
+        // gsap js for boxes is below
+        var tl = new TimelineMax({ repeat: -1, yoyo: true })
+        tl.to("#box1", 0.7, { borderWidth: 20, ease: Back.easeInOut }, 0);
+
+        tl.to("#box2", 0.7, { borderWidth: 20, ease: Back.easeInOut }, 0);
+
+        tl.to("#box3", 0.7, { borderLeftWidth: 30, borderTopWidth: 30, borderRightWidth: 30, borderBottomWidth: 30, ease: Back.easeInOut }, 0);
+
+        tl.to('#box4', {duration: 1, opacity: 0, y: "random(-200, 200)", stagger: 0.25})
+
+        tl.to('#box5', {duration: 1, opacity: 0, y: "random(-200, 200)", stagger: 0.25})
+
+        tl.to('#box6', {duration: 1, opacity: 0, y: "random(-200, 200)", stagger: 0.25})
+
+        tl.to('.a', {duration: 2, opacity: 0, y: "random(-200, 200)", stagger: 0.25})
+
+        // tl.to('.l', {duration: .1, opacity: 0, y: "random(-200, 200)", stagger: 0.08})
+
+        // tl.to('.b', {duration: .1, opacity: 0, y: "random(-200, 200)", stagger: 0.08})
+
+        // tl.to('.e', {duration: .1, opacity: 0, y: "random(-200, 200)", stagger: 0.08})
+
+        // tl.to('.r', {duration: .1, opacity: 0, y: "random(-200, 200)", stagger: 0.08})
+
+        // tl.to('.t', {duration: .1, opacity: 0, y: "random(-200, 200)", stagger: 0.08})        
+</script>
+</body>
+</html>
